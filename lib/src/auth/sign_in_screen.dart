@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/auth/config/sing_up_screen.dart';
 
 import 'compenets/custon_text_field.dart';
 import 'config/custom_colors.dart';
@@ -9,7 +10,6 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -20,55 +20,56 @@ class SignInScreen extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child:
-                    Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  //NOME DO APP
-                   Text.rich(
-                    TextSpan(
-                      style: const TextStyle(
-                        fontSize: 40,
-                      ),
-                      children: [
-                        const TextSpan(
-                          text: 'Fruit',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      //NOME DO APP
+                      Text.rich(
                         TextSpan(
-                          text: 'Manto',
-                          style: TextStyle(
-                            color: CustomColors.CustomContrastColors,
-                            //fontWeight: FontWeight.bold,
+                          style: const TextStyle(
+                            fontSize: 40,
+                          ),
+                          children: [
+                            const TextSpan(
+                              text: 'Fruit',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'Manto',
+                              style: TextStyle(
+                                color: CustomColors.CustomContrastColors,
+                                //fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      //CATEGORIAS
+                      SizedBox(
+                        height: 30,
+                        child: DefaultTextStyle(
+                          style: const TextStyle(
+                            fontSize: 25,
+                          ),
+                          child: AnimatedTextKit(
+                            pause: Duration.zero,
+                            repeatForever: true,
+                            animatedTexts: [
+                              FadeAnimatedText('Frutas'),
+                              FadeAnimatedText('Verduras'),
+                              FadeAnimatedText('Legumes'),
+                              FadeAnimatedText('Carnes'),
+                              FadeAnimatedText('Cereais'),
+                              FadeAnimatedText('Laticinios'),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-      
-                  //CATEGORIAS
-                  SizedBox(
-                    height: 30,
-                    child: DefaultTextStyle(
-                      style: const TextStyle(
-                        fontSize: 25,
-                      ),
-                      child: AnimatedTextKit(
-                        pause: Duration.zero,
-                        repeatForever: true,
-                        animatedTexts: [
-                          FadeAnimatedText('Frutas'),
-                          FadeAnimatedText('Verduras'),
-                          FadeAnimatedText('Legumes'),
-                          FadeAnimatedText('Carnes'),
-                          FadeAnimatedText('Cereais'),
-                          FadeAnimatedText('Laticinios'),
-                        ],
-                      ),
-                    ),
-                  )
-                ]),
+                      )
+                    ]),
               ),
               //Formulário
               Container(
@@ -78,7 +79,8 @@ class SignInScreen extends StatelessWidget {
                 ),
                 decoration: const BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(50))),
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(50))),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -87,14 +89,14 @@ class SignInScreen extends StatelessWidget {
                         icon: Icons.email,
                         label: 'Email',
                       ),
-      
+
                       //SENHA
                       const CustonTextField(
                         icon: Icons.lock,
                         label: 'Senha',
                         isSecret: true,
                       ),
-      
+
                       //BOTÃO ENTRAR
                       SizedBox(
                         height: 50,
@@ -111,19 +113,20 @@ class SignInScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-      
+
                       //ESQUECEU A SENHA?
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
                           onPressed: () {},
-                          child:  Text(
+                          child: Text(
                             'Esqueceu a senha?',
-                            style: TextStyle(color: CustomColors.CustomContrastColors),
+                            style: TextStyle(
+                                color: CustomColors.CustomContrastColors),
                           ),
                         ),
                       ),
-      
+
                       //DIVISOR E OU
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10),
@@ -148,7 +151,7 @@ class SignInScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-      
+
                       //BOTÃO CRIAR CONTA
                       SizedBox(
                         height: 50,
@@ -162,7 +165,12 @@ class SignInScreen extends StatelessWidget {
                                 color: Colors.green,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .push(MaterialPageRoute(builder: (c) {
+                                return SingUpScreen();
+                              }));
+                            },
                             child: const Text(
                               'Criar Conta',
                               style: TextStyle(
