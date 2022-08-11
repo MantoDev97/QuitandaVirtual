@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/auth/compenets/custon_text_field.dart';
-import 'package:greengrocer/src/auth/config/custom_colors.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import '../config/custom_colors.dart';
 
 class SingUpScreen extends StatelessWidget {
   SingUpScreen({Key? key}) : super(key: key);
