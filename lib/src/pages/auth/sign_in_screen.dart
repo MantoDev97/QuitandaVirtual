@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/auth/sing_up_screen.dart';
-import 'package:greengrocer/src/base/base_screen.dart';
-import '../config/custom_colors.dart';
+import 'package:greengrocer/src/pages/auth/sing_up_screen.dart';
+import '../../config/custom_colors.dart';
+import '../base/base_screen.dart';
 import 'compenets/custon_text_field.dart';
 
 
@@ -61,11 +61,11 @@ class SignInScreen extends StatelessWidget {
                             repeatForever: true,
                             animatedTexts: [
                               FadeAnimatedText('Frutas'),
-                              FadeAnimatedText('Verduras'),
+                              FadeAnimatedText('Grãos'),
                               FadeAnimatedText('Legumes'),
                               FadeAnimatedText('Tempeiros'),
                               FadeAnimatedText('Cereais'),
-                              FadeAnimatedText('Laticinios'),
+                              //FadeAnimatedText('Laticinios'),
                             ],
                           ),
                         ),
