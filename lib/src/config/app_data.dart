@@ -54,7 +54,7 @@ ItemModel papaya = ItemModel(
       'O melhor mamão da região e que conta com o melhor preço de qualquer quitanda. Este item conta com vitaminas essenciais para o fortalecimento corporal, resultando em uma vida saudável.',
 );
 
-List<ItemModel> itens = [
+List<ItemModel> items = [
   apple,
   grape,
   guava,

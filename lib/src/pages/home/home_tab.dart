@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
+import 'package:greengrocer/src/pages/home/compenets/item_tile.dart';
 import 'compenets/category_tile.dart';
 import 'package:greengrocer/src/config/app_data.dart' as app_data;
 
@@ -131,10 +132,10 @@ class _HomeTabState extends State<HomeTab> {
                 crossAxisSpacing: 10,
                 childAspectRatio: 9 / 11.5,
               ),
-              itemCount: app_data.itens.length,
+              itemCount: app_data.items.length,
               itemBuilder: (_, index) {
-                return Container(
-                  color: Colors.red,
+                return ItemTile(
+                  item: app_data.items[index],
                 );
               },
             ),
