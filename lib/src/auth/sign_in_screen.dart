@@ -42,7 +42,7 @@ class SignInScreen extends StatelessWidget {
                               text: 'Manto',
                               style: TextStyle(
                                 color: CustomColors.CustomContrastColors,
-                                //fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -63,7 +63,7 @@ class SignInScreen extends StatelessWidget {
                               FadeAnimatedText('Frutas'),
                               FadeAnimatedText('Verduras'),
                               FadeAnimatedText('Legumes'),
-                              FadeAnimatedText('Carnes'),
+                              FadeAnimatedText('Tempeiros'),
                               FadeAnimatedText('Cereais'),
                               FadeAnimatedText('Laticinios'),
                             ],
