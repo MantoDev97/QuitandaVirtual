@@ -24,7 +24,7 @@ class _CustonTextFieldState extends State<CustonTextField> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
 
     isObscure = widget.isSecret;

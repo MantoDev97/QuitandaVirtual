@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
     
         primarySwatch: Colors.green,
+        scaffoldBackgroundColor: Colors.white.withAlpha(190),
       ),
       home: const SignInScreen(),
     );
