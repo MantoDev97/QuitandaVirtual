@@ -20,7 +20,9 @@ Map<int, Color> _swathOpacity ={
 };
 
 abstract class CustomColors{
-  static Color CustomContrastColors = Colors.red.shade700;
+  // ignore: non_constant_identifier_names
+  static Color CustomContrastColors =  Colors.red.shade700;
 
+  // ignore: non_constant_identifier_names
   static MaterialColor CustomSwathColor = MaterialColor(0xff8bc34a, _swathOpacity);
 } 
