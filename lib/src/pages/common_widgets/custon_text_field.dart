@@ -6,6 +6,8 @@ class CustonTextField extends StatefulWidget {
   final String label;
   final bool isSecret;
   final List<TextInputFormatter>? inputFormatters;
+  final String? initialValue;
+  final bool readOnly;
 
   const CustonTextField({
     Key? key,
@@ -13,6 +15,8 @@ class CustonTextField extends StatefulWidget {
     required this.label,
     this.isSecret = false,
     this.inputFormatters,
+    this.initialValue,
+    this.readOnly = false,
   }) : super(key: key);
 
   @override
@@ -24,7 +28,6 @@ class _CustonTextFieldState extends State<CustonTextField> {
 
   @override
   void initState() {
-    
     super.initState();
 
     isObscure = widget.isSecret;
@@ -35,6 +38,8 @@ class _CustonTextFieldState extends State<CustonTextField> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
+        readOnly: widget.readOnly,
+        initialValue: widget.initialValue,
         inputFormatters: widget.inputFormatters,
         obscureText: isObscure,
         decoration: InputDecoration(

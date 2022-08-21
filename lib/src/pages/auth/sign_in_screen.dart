@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:greengrocer/src/pages/auth/sing_up_screen.dart';
 import '../../config/custom_colors.dart';
 import '../base/base_screen.dart';
-import 'compenets/custon_text_field.dart';
-
+import '../common_widgets/custon_text_field.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -107,9 +106,9 @@ class SignInScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20))),
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (c){
-                                 return const BaseScreen();
-                              }));
+                                MaterialPageRoute(builder: (c) {
+                              return const BaseScreen();
+                            }));
                           },
                           child: const Text(
                             'Entrar',

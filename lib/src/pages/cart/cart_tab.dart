@@ -6,7 +6,7 @@ import 'package:greengrocer/src/services/utils_services.dart';
 import 'package:greengrocer/src/config/app_data.dart' as appData;
 
 class CartTab extends StatefulWidget {
-  CartTab({Key? key}) : super(key: key);
+  const CartTab({Key? key}) : super(key: key);
 
   @override
   State<CartTab> createState() => _CartTabState();
@@ -34,7 +34,7 @@ class _CartTabState extends State<CartTab> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Carinho",
+          "Carrinho",
         ),
       ),
       body: Column(

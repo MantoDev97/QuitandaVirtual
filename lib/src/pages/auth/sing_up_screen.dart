@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 import '../../config/custom_colors.dart';
-import 'compenets/custon_text_field.dart';
+import '../common_widgets/custon_text_field.dart';
 
 
 class SingUpScreen extends StatelessWidget {

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/pages/cart/cart_tab.dart';
+import 'package:greengrocer/src/pages/profile/profile_tab.dart';
 
 import '../home/home_tab.dart';
 
-
 class BaseScreen extends StatefulWidget {
-   const BaseScreen({Key? key}) : super(key: key);
+  const BaseScreen({Key? key}) : super(key: key);
 
   @override
   State<BaseScreen> createState() => _BaseScreenState();
 }
 
 class _BaseScreenState extends State<BaseScreen> {
-
   int currentIndex = 0;
   final pageController = PageController();
 
@@ -24,19 +23,21 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           const HomeTab(),
-           CartTab(),
-          Container(color: Colors.yellow,),
-          Container(color: Colors.green,),
+          const CartTab(),
+          Container(
+            color: Colors.yellow,
+          ),
+          const ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (index){
-          setState(() {
-            currentIndex = index;
-            pageController.jumpToPage(index);
-          });
-        },
+          currentIndex: currentIndex,
+          onTap: (index) {
+            setState(() {
+              currentIndex = index;
+              pageController.jumpToPage(index);
+            });
+          },
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.green,
           selectedItemColor: Colors.white,
