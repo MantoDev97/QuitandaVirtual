@@ -105,7 +105,7 @@ List<OrderModel> orders = [
       '2022-06-08 10:00:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2022-06-08 11:00:10.458',
+      '2022-12-08 11:00:10.458',
     ),
     id: 'asd6a54da6s2d1',
     status: 'pending_payment',
@@ -119,6 +119,10 @@ List<OrderModel> orders = [
         item: mango,
         quantity: 2,
       ),
+      CartItemModel(
+        item: papaya,
+        quantity: 4,
+      ),
     ],
   ),
 
@@ -129,10 +133,10 @@ List<OrderModel> orders = [
       '2022-06-08 10:00:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2022-06-08 11:00:10.458',
+      '2022-12-08 11:00:10.458',
     ),
     id: 'a65s4d6a2s1d6a5s',
-    status: 'refunded',
+    status: 'preparing_purchase',
     total: 11.5,
     items: [
       CartItemModel(
