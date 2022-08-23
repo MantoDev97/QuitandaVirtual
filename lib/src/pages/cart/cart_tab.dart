@@ -138,7 +138,7 @@ class _CartTabState extends State<CartTab> {
             borderRadius: BorderRadius.circular(20),
           ),
           title: const Text('Confirmação'),
-          content: const Text('Deseja realmente concluir o peido?'),
+          content: const Text('Deseja realmente concluir o pedido?'),
           actions: [
             TextButton(
               onPressed: () {
