@@ -4,7 +4,7 @@ import 'package:greengrocer/src/models/cart_item_model.dart';
 import 'package:greengrocer/src/pages/cart/components/cart_tile.dart';
 import 'package:greengrocer/src/pages/common_widgets/payment_dialog.dart';
 import 'package:greengrocer/src/services/utils_services.dart';
-import 'package:greengrocer/src/config/app_data.dart' as appData;
+import 'package:greengrocer/src/config/app_data.dart' as app_data;
 
 class CartTab extends StatefulWidget {
   const CartTab({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _CartTabState extends State<CartTab> {
 
   void removeItemFromCart(CartItemModel cartItem) {
     setState(() {
-      appData.cartItems.remove(cartItem);
+      app_data.cartItems.remove(cartItem);
 
       utilsServices.showToast(
         message: '${cartItem.item.itemName} removido(a) do carrinho.',
@@ -28,7 +28,7 @@ class _CartTabState extends State<CartTab> {
 
   double cartTotalPrice() {
     double total = 0;
-    for (var item in appData.cartItems) {
+    for (var item in app_data.cartItems) {
       total += item.totalPrice();
     }
     return total;
@@ -47,14 +47,14 @@ class _CartTabState extends State<CartTab> {
           //Lista de itens do carrinho
           Expanded(
             child: ListView.builder(
-              itemCount: appData.cartItems.length,
+              itemCount: app_data.cartItems.length,
               itemBuilder: (_, index) {
-                final cartItem = appData.cartItems[index];
+                final cartItem = app_data.cartItems[index];
                 return CartTile(
-                  cartItem: appData.cartItems[index],
+                  cartItem: app_data.cartItems[index],
                   updatedQuantity: (qtd) {
                     if (qtd == 0) {
-                      removeItemFromCart(appData.cartItems[index]);
+                      removeItemFromCart(app_data.cartItems[index]);
                     } else {
                       setState(() => cartItem.quantity = qtd);
                     }
@@ -112,7 +112,7 @@ class _CartTabState extends State<CartTab> {
                           context: context,
                           builder: (_) {
                             return PaymentDialog(
-                              order: appData.orders.first,
+                              order: app_data.orders.first,
                             );
                           },
                         );

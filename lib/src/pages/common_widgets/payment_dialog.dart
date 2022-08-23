@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/models/order_model.dart';
 import 'package:greengrocer/src/services/utils_services.dart';
 import 'package:qr_flutter/qr_flutter.dart';
