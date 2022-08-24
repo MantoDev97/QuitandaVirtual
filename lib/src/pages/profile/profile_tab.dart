@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/pages/auth/sign_in_screen.dart';
 import 'package:greengrocer/src/pages/common_widgets/custon_text_field.dart';
 import 'package:greengrocer/src/config/app_data.dart' as app_data;
 
@@ -19,7 +20,12 @@ class _ProfileTabState extends State<ProfileTab> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SignInScreen()),
+              );
+            },
             icon: const Icon(
               Icons.logout,
             ),

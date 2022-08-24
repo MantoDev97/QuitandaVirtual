@@ -3,6 +3,7 @@ import 'package:add_to_cart_animation/add_to_cart_icon.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
+import 'package:greengrocer/src/pages/cart/cart_tab.dart';
 import 'package:greengrocer/src/pages/home/components/item_tile.dart';
 import 'package:greengrocer/src/pages/home/components/category_tile.dart';
 import 'package:greengrocer/src/config/app_data.dart' as app_data;
@@ -57,7 +58,12 @@ class _HomeTabState extends State<HomeTab> {
               right: 15,
             ),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                 Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CartTab()),
+              );
+              },
               child: Badge(
                 badgeColor: CustomColors.CustomContrastColors,
                 badgeContent: const Text(
