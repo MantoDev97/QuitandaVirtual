@@ -4,6 +4,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/pages/cart/cart_tab.dart';
+import 'package:greengrocer/src/pages/common_widgets/app_name_widget.dart';
 import 'package:greengrocer/src/pages/home/components/item_tile.dart';
 import 'package:greengrocer/src/pages/home/components/category_tile.dart';
 import 'package:greengrocer/src/config/app_data.dart' as app_data;
@@ -36,21 +37,7 @@ class _HomeTabState extends State<HomeTab> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: Text.rich(
-          TextSpan(
-            style: const TextStyle(fontSize: 30),
-            children: [
-              TextSpan(
-                text: 'Fruit',
-                style: TextStyle(color: CustomColors.CustomSwathColor),
-              ),
-              TextSpan(
-                text: 'Manto',
-                style: TextStyle(color: CustomColors.CustomContrastColors),
-              ),
-            ],
-          ),
-        ),
+        title: appNameWidget(),
         actions: [
           Padding(
             padding: const EdgeInsets.only(
@@ -175,3 +162,4 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 }
+
