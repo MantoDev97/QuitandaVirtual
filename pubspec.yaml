@@ -49,6 +49,8 @@ dependencies:
 
   fluttertoast: ^8.0.8
 
+  shimmer: ^2.0.0
+
 
 
 dev_dependencies:
