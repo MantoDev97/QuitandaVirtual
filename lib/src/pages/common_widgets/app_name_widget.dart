@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 
+// ignore: camel_case_types
 class appNameWidget extends StatelessWidget {
   final Color? greenTileColor;
   final double textSize;
@@ -15,7 +16,7 @@ class appNameWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
-        style:  TextStyle(fontSize: textSize),
+        style: TextStyle(fontSize: textSize),
         children: [
           TextSpan(
             text: 'Fruit',

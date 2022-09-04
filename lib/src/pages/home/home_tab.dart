@@ -34,7 +34,6 @@ class _HomeTabState extends State<HomeTab> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     Future.delayed(
@@ -55,7 +54,7 @@ class _HomeTabState extends State<HomeTab> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: appNameWidget(),
+        title: const appNameWidget(),
         actions: [
           Padding(
             padding: const EdgeInsets.only(
